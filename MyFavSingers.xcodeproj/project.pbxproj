@@ -22,6 +22,9 @@
 		0DCE19EB19D0D8D3003BE707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCE19CA19D0D8D2003BE707 /* UIKit.framework */; };
 		0DCE19F319D0D8D3003BE707 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE19F119D0D8D3003BE707 /* InfoPlist.strings */; };
 		0DCE19F519D0D8D3003BE707 /* MyFavSingersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE19F419D0D8D3003BE707 /* MyFavSingersTests.m */; };
+		0DCE1A0119D0EBAD003BE707 /* Beyonce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE19FF19D0EBAD003BE707 /* Beyonce.jpg */; };
+		0DCE1A0219D0EBAD003BE707 /* Britney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE1A0019D0EBAD003BE707 /* Britney.jpg */; };
+		0DCE1A0619D0EC46003BE707 /* Nicki Minaj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE1A0519D0EC46003BE707 /* Nicki Minaj.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		0DCE19F019D0D8D3003BE707 /* MyFavSingersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFavSingersTests-Info.plist"; sourceTree = "<group>"; };
 		0DCE19F219D0D8D3003BE707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DCE19F419D0D8D3003BE707 /* MyFavSingersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFavSingersTests.m; sourceTree = "<group>"; };
+		0DCE19FF19D0EBAD003BE707 /* Beyonce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beyonce.jpg; sourceTree = "<group>"; };
+		0DCE1A0019D0EBAD003BE707 /* Britney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Britney.jpg; sourceTree = "<group>"; };
+		0DCE1A0519D0EC46003BE707 /* Nicki Minaj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nicki Minaj.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		0DCE19BA19D0D8D2003BE707 = {
 			isa = PBXGroup;
 			children = (
+				0DCE19FE19D0EA2A003BE707 /* Photos */,
 				0DCE19CC19D0D8D2003BE707 /* MyFavSingers */,
 				0DCE19EE19D0D8D3003BE707 /* MyFavSingersTests */,
 				0DCE19C519D0D8D2003BE707 /* Frameworks */,
@@ -115,6 +122,7 @@
 		0DCE19CC19D0D8D2003BE707 /* MyFavSingers */ = {
 			isa = PBXGroup;
 			children = (
+				0DCE1A0719D0ED4C003BE707 /* iPad */,
 				0DCE19D519D0D8D3003BE707 /* UsingViews2AppDelegate.h */,
 				0DCE19D619D0D8D3003BE707 /* UsingViews2AppDelegate.m */,
 				0DCE19D819D0D8D3003BE707 /* Main.storyboard */,
@@ -155,6 +163,23 @@
 				0DCE19F119D0D8D3003BE707 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DCE19FE19D0EA2A003BE707 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				0DCE1A0519D0EC46003BE707 /* Nicki Minaj.jpg */,
+				0DCE19FF19D0EBAD003BE707 /* Beyonce.jpg */,
+				0DCE1A0019D0EBAD003BE707 /* Britney.jpg */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		0DCE1A0719D0ED4C003BE707 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +230,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = webstudent;
 				TargetAttributes = {
+					0DCE19C219D0D8D2003BE707 = {
+						DevelopmentTeam = LAK6SGQ7Q5;
+					};
 					0DCE19E619D0D8D3003BE707 = {
 						TestTargetID = 0DCE19C219D0D8D2003BE707;
 					};
@@ -234,9 +262,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCE1A0619D0EC46003BE707 /* Nicki Minaj.jpg in Resources */,
 				0DCE19E219D0D8D3003BE707 /* Images.xcassets in Resources */,
 				0DCE19D119D0D8D3003BE707 /* InfoPlist.strings in Resources */,
 				0DCE19DA19D0D8D3003BE707 /* Main.storyboard in Resources */,
+				0DCE1A0219D0EBAD003BE707 /* Britney.jpg in Resources */,
+				0DCE1A0119D0EBAD003BE707 /* Beyonce.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +417,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFavSingers/MyFavSingers-Prefix.pch";
 				INFOPLIST_FILE = "MyFavSingers/MyFavSingers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,7 +432,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFavSingers/MyFavSingers-Prefix.pch";
 				INFOPLIST_FILE = "MyFavSingers/MyFavSingers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -463,6 +498,7 @@
 				0DCE19FA19D0D8D3003BE707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DCE19FB19D0D8D3003BE707 /* Build configuration list for PBXNativeTarget "MyFavSingersTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +507,7 @@
 				0DCE19FD19D0D8D3003BE707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

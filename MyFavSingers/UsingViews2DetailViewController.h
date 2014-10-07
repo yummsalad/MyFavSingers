@@ -9,8 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @interface UsingViews2DetailViewController : UIViewController
+{
+    //1) Add Default initializers
+    NSString *productName;
+    CGFloat previousScale;
+    CGFloat previousRotation;
+    CGFloat beginX;
+    CGFloat beginY;
+}
 
-@property (strong, nonatomic) id detailItem;
+//2) Modify.
+//This will get rid of error on MasterViewConrtoller:
+//(void)prepareForSegue:
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *productImageView;
+@property (strong, nonatomic) NSString *productName;
+
 @end

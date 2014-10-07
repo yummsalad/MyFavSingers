@@ -2,8 +2,8 @@
 //  UsingViews2MasterViewController.m
 //  MyFavSingers
 //
-//  Created by webstudent on 9/22/14.
-//  Copyright (c) 2014 webstudent. All rights reserved.
+//  Created by CesarSilva on 9/22/14.
+//  Copyright (c) 2014 Cesar Silva. All rights reserved.
 //
 
 #import "UsingViews2MasterViewController.h"
@@ -16,20 +16,20 @@
 @end
 
 @implementation UsingViews2MasterViewController
+//Synthesize s oyou dont have to repeat .self everytime
+@synthesize list;
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+     self.title = @"Who Runs the World?";
+    NSArray *listArray = [[NSArray alloc] initWithObjects:@"Beyonce", @"Nicki Minaj", @"Britney",nil];
+    self.list = listArray;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,16 +57,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [list count]; //this would show the list on didload
+    //return _objects.count;    this would give the default menu that can erase lists
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.textLabel.text = [list objectAtIndex:[indexPath row]];
     return cell;
+    
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+
+    //NSDate *object = _objects[indexPath.row];
+    //cell.textLabel.text = [object description];
+    //return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,11 +110,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-    }
-}
+        [segue.destinationViewController  setProductName:[list objectAtIndex:[self.tableView.indexPathForSelectedRow row]]];}
 
 @end
